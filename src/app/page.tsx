@@ -1,17 +1,22 @@
 import ContactSection from "@/components/landing/ContactSection";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Footer from "@/components/common/Footer";
+import Header from "@/components/common/Header";
 import Hero from "@/components/landing/Hero";
 import Image from "next/image";
+import Partner from "@/components/landing/Partner";
+import IdolCard from "@/components/landing/CaseStudy/IdolCard";
+import CaseStudy from "@/components/landing/CaseStudy/CaseStudy";
 
 export default function Home() {
   return (
     <div>
-      <Header/>
-      <Hero/>
-      <ContactSection/>
-      <Footer/>
-      
+      <Header />
+      <Hero />
+      <Partner />
+      <ContactSection />
+
+      <CaseStudy />
+      <Footer />
     </div>
   );
 }
