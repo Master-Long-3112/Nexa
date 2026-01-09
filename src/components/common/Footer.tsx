@@ -19,7 +19,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Image
-                src="/assets/icons/Nexa_Logo.png"
+                src="/assets/icons/Nexa_Logo_White.svg"
                 alt="Icon"
                 width={170}
                 height={45}

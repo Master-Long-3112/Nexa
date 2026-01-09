@@ -7,7 +7,7 @@ const Header = () => {
       <div className="flex flex-wrap gap-20 items-center justify-between">
         <div className="relative w-36 aspect-170/45">
           <Image
-            src="/assets/icons/Nexa_Logo.png"
+            src="/assets/icons/Nexa_Logo_White.svg"
             alt="Icon"
             fill
             className="object-contain"

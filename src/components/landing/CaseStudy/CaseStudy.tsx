@@ -68,7 +68,7 @@ const CaseStudy = () => {
 
           {/* Thumb */}
           <div
-            className="absolute top-[4px] left-[2%]  h-[12px] bg-pink-300 rounded-full transition-all duration-300 w-[10%]"
+            className="absolute top-[6px] left-[2%]  h-[8px] bg-pink-300 rounded-full transition-all duration-300 w-[10%]"
             style={{
               marginLeft: `${Math.min(progress * 100, 86)}%`,
             }}
