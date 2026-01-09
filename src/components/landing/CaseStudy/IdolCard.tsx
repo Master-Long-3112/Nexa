@@ -5,14 +5,23 @@ import Image from "next/image";
 interface IProps {
   imageSrc: string;
   altText: string;
+  textColorCode?: string;
 }
 
-const IdolCard = ({ imageSrc, altText }: IProps) => {
+const SVG_WIDTH = 308;
+const SVG_HEIGHT = 446;
+
+// usable vertical space for text
+const TEXT_HEIGHT = 380;
+const TEXT_X = 50;
+const TEXT_BASELINE_Y = SVG_HEIGHT - 40;
+
+const IdolCard = ({ imageSrc, altText, textColorCode }: IProps) => {
   return (
-    <div className="relative w-140 aspect-7/10 bg-black">
+    <div className="relative w-full aspect-[7/10] bg-black">
       {/* SVG defs */}
       <svg
-        viewBox="0 0 308 446"
+        viewBox={`0 0 ${SVG_WIDTH} ${SVG_HEIGHT}`}
         className="absolute inset-0 pointer-events-none"
         aria-hidden
       >
@@ -23,7 +32,7 @@ const IdolCard = ({ imageSrc, altText }: IProps) => {
         </defs>
       </svg>
 
-      {/* IMAGE LAYER */}
+      {/* IMAGE */}
       <div className="absolute inset-0 z-0">
         <Image
           src={imageSrc}
@@ -38,10 +47,30 @@ const IdolCard = ({ imageSrc, altText }: IProps) => {
         />
       </div>
 
-      {/* TEXT LAYER */}
-      <p className="absolute top-[3%] left-[-3%] z-10 text-[600%] rotate-180 text-green-500 max-h-200 [writing-mode:vertical-lr]">
-        JENNIE KIM
-      </p>
+      {/* TEXT */}
+      <svg
+        viewBox={`0 0 ${SVG_WIDTH} ${SVG_HEIGHT}`}
+        className="absolute inset-0 z-10 pointer-events-none"
+        role="img"
+        aria-label={altText}
+      >
+        <text
+          x={TEXT_X}
+          y={TEXT_BASELINE_Y}
+          fill={textColorCode || "#ffffff"}
+          fontWeight={600}
+          fontSize={48} // base size
+          letterSpacing="3"
+          writingMode="vertical-rl" // vertical text
+          dominantBaseline="alphabetic"
+          textAnchor="start"
+          textLength={TEXT_HEIGHT} // fit to height
+          lengthAdjust="spacingAndGlyphs"
+          transform={`rotate(180 ${TEXT_X} ${TEXT_BASELINE_Y})`}
+        >
+          {altText}
+        </text>
+      </svg>
     </div>
   );
 };

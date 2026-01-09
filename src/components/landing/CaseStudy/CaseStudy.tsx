@@ -1,53 +1,80 @@
 "use client";
-import React from "react";
-import { FreeMode, Pagination, Scrollbar } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode } from "swiper/modules";
+import { useRef, useState } from "react";
 import "swiper/css";
-import "swiper/css/scrollbar";
+import IdolCard from "./IdolCard";
+import type { Swiper as SwiperType } from "swiper";
+
+const idolImages = new Array(9).fill({
+  imageSrc: "/assets/images/JennieKim.jpg",
+  altText: "Jennie Kim Idol Card",
+});
 
 const CaseStudy = () => {
+  const swiperRef = useRef<SwiperType>(null);
+  const [progress, setProgress] = useState(0);
+
   return (
-    <div>
-      <p>Case Study</p>
+    <div className="px-24 bg-black text-white py-5 mb-5">
+      {/* Title */}
+      <div className="relative py-10 mb-8">
+        <div className="absolute top-17 w-28 h-[12px] bg-pink-300 rounded-full" />
+        <p className="text-4xl relative z-10">Case Study</p>
+      </div>
+
+      {/* Swiper */}
       <Swiper
-        slidesPerView={3}
+        slidesPerView={4}
         spaceBetween={20}
-        freeMode={true}
-        scrollbar={{
-          hide: true,
-        }}
-        modules={[Scrollbar, FreeMode, Pagination]}
-        className="mySwiper "
+        freeMode
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
+        onProgress={(_, p) => setProgress(p)}
+        modules={[FreeMode]}
       >
-        <SwiperSlide>
-          <p className="bg-blue-100 ">Slide 1</p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <p className="bg-blue-200 ">Slide 2</p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <p className="bg-blue-300 ">Slide 3</p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <p className="bg-blue-400 ">Slide 4</p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <p className="bg-blue-500 ">Slide 5</p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <p className="bg-blue-600 ">Slide 6</p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <p className="bg-blue-700">Slide 7</p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <p className="bg-blue-800">Slide 8</p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <p className="bg-blue-900">Slide 9</p>
-        </SwiperSlide>
+        {idolImages.map((idol, i) => (
+          <SwiperSlide key={i}>
+            <IdolCard {...idol} />
+          </SwiperSlide>
+        ))}
       </Swiper>
+
+      {/* Custom Scrollbar */}
+      <div className="mt-12 flex items-center gap-6">
+        {/* Left button */}
+        <button
+          onClick={() => swiperRef.current?.slidePrev()}
+          className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-white/10 transition"
+        >
+          ←
+        </button>
+        {/* Right button */}
+        <button
+          onClick={() => swiperRef.current?.slideNext()}
+          className="w-10 h-10 rounded-full bg-pink-300 text-black flex items-center justify-center hover:brightness-110 transition"
+        >
+          →
+        </button>
+
+        {/* Track */}
+        <div className="relative flex flex-1 h-[20px] rounded-full overflow-hidden">
+          {/* Bar */}
+          <div className="absolute top-[9px] left-[2%] inset-0 bg-white/40 h-[2px] w-[96%] relative">
+            {/* Dot */}
+            <div className="absolute -top-[2px] left-[-2px] w-[6px] h-[6px] bg-white rounded-full" />
+            <div className="absolute -top-[2px] right-[-2px] w-[6px] h-[6px] bg-white rounded-full" />
+          </div>
+
+          {/* Thumb */}
+          <div
+            className="absolute top-[4px] left-[2%]  h-[12px] bg-pink-300 rounded-full transition-all duration-300 w-[10%]"
+            style={{
+              marginLeft: `${Math.min(progress * 100, 86)}%`,
+            }}
+          />
+        </div>
+      </div>
     </div>
   );
 };
