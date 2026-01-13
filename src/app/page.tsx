@@ -9,12 +9,14 @@ import CaseStudy from "@/components/landing/CaseStudy/CaseStudy";
 import CompetitiveAdvantage from "@/components/landing/CompetitiveAdvantage";
 import ForCreator from "@/components/landing/ForCreator";
 import ForBrand from "@/components/landing/ForBrand";
+import OurNetwork from "@/components/landing/OurNetwork";
 
 export default function Home() {
   return (
     <div>
       <Header />
       <Hero />
+      <OurNetwork />
       <CompetitiveAdvantage />
       <ForCreator />
       <ForBrand />

@@ -88,7 +88,7 @@ const ContentCard = ({
 
 const CompetitiveAdvantage = () => {
   return (
-    <div className="px-25">
+    <div className="@cotainer px-25">
       <div className="flex flex-col xl:flex-row items-center justify-between gap-10 mb-10">
         <div>
           <Image

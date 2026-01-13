@@ -44,8 +44,8 @@ export default function ForBrand() {
           </text>
         </svg>
       </div>
-      <div>
-        <div className="items-center bg-white text-pink-500 text-2xl font-semibold rounded-full inline-flex justify-between gap-10 px-10 py-3 mt-3 mb-10">
+      <div className="flex items-center justify-between mb-5">
+        <div className="items-center bg-white text-pink-500 text-2xl font-semibold rounded-full inline-flex justify-between gap-10 px-10 py-3">
           <span>Get In Touch</span>
           <button className="shrink-0 w-12 h-12 rounded-full bg-pink-500 flex items-center justify-center text-white">
             <svg
@@ -56,13 +56,16 @@ export default function ForBrand() {
               stroke="currentColor"
               className="size-6"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-              />
+              <path d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
             </svg>
           </button>
+        </div>
+        <div>
+          <p className="w-180 mx-20">
+            NEXA Network cung cấp cho các thương hiệu một hệ sinh thái toàn diện
+            gồm truyền thông, công nghệ và tiếp thị người ảnh hưởng để tối đa
+            hóa khả năng hiển thị, tương tác và doanh số bán hàng.
+          </p>
         </div>
       </div>
 
