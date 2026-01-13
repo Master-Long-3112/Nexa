@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#191919] text-gray-300">
       <div className="px-25 py-18">
-        <div className="grid grid-cols-4 gap-10 mb-20">
+        <div className="grid grid-col-1 lg:grid-cols-4 gap-10 mb-20">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -51,11 +51,11 @@ const Footer = () => {
           </div>
 
           {/* Address */}
-          <div className="col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             <h4 className="text-white font-medium mb-1">Address</h4>
             <hr className="max-w-5 mb-10" />
 
-            <div className="grid grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
               <p className="text-md text-gray-400 leading-relaxed">
                 Lot B7, 19A Street, Tan Thuan Export Processing Zone, Tan Thuan
                 Dong Ward, District 7, Ho Chi Minh City, Vietnam
@@ -67,7 +67,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-10 mt-6 text-lg text-gray-400">
+        <div className="flex flex-col items-center justify-center md:flex-row md:justify-start gap-10 mt-6 text-lg text-gray-400">
           <Link href="#">
             <FaFacebookF />
           </Link>

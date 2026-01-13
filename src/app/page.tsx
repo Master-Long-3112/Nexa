@@ -17,12 +17,12 @@ export default function Home() {
       <Header />
       <Hero />
       <OurNetwork />
-      <CompetitiveAdvantage />
-      <ForCreator />
-      <ForBrand />
+      {/* <CompetitiveAdvantage /> */}
+      {/* <ForCreator /> */}
+      {/* <ForBrand /> */}
       <CaseStudy />
       <Partner />
-      <ContactSection />
+      {/* <ContactSection /> */}
 
       <Footer />
     </div>

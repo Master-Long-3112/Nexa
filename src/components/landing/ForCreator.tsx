@@ -62,30 +62,9 @@ const SolutionCard = ({
 const ForCreator = () => {
   return (
     <div className="px-25">
-      <div>
-        <svg viewBox="0 0 1200 200">
-          <text
-            x="0"
-            y="150"
-            className="fill-black font-bold tracking-wide"
-            fontSize="120"
-            dominantBaseline="middle"
-          >
-            FOR CREATORS
-          </text>
-          <image
-            href="/assets/icons/Letter_O.svg"
-            x="713"
-            y="88"
-            width="100"
-            height="100"
-          />
-        </svg>
-      </div>
-      <div className="flex flex-col lg:flex-row justify-between gap-35 pt-2">
-        <span className="text-9xl font-bold">SOLUTION</span>
-        <span className="flex flex-col justify-between py-4">
-          <p className="text-md">
+      <div className="relative">
+        <span className="absolute top-52 left- flex flex-col justify-between w-100">
+          <p className="text-md mb-3">
             NEXA Network cung cấp cho người sáng tạo một hệ sinh thái toàn diện
             để thúc đẩy sự phát triển nội dung, tương tác và kiếm tiền:
           </p>
@@ -94,6 +73,7 @@ const ForCreator = () => {
           </a>
         </span>
       </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
         <SolutionCard
           title="Content Creation Tools"

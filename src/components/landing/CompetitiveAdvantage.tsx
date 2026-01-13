@@ -89,7 +89,7 @@ const ContentCard = ({
 const CompetitiveAdvantage = () => {
   return (
     <div className="@cotainer px-25">
-      <div className="flex flex-col xl:flex-row items-center justify-between gap-10 mb-10">
+      <div className="flex flex-col xl:flex-row items-center justify-center gap-10 mb-10">
         <div>
           <Image
             width={260}
@@ -98,7 +98,7 @@ const CompetitiveAdvantage = () => {
             src="/assets/icons/Nexa_Logo_Black.svg"
           />
         </div>
-        <div className="text-[80px] font-bold text-center">
+        <div className="text-[75px] font-bold text-center">
           <span className="text-pink-400">LỢI THẾ </span>
           <span className="text-pink-200">CẠNH TRANH</span>
         </div>
