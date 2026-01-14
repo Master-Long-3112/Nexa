@@ -67,7 +67,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center md:flex-row md:justify-start gap-10 mt-6 text-lg text-gray-400">
+        <div className="flex  justify-start flex-wrap gap-10 mt-6 text-lg text-gray-400">
           <Link href="#">
             <FaFacebookF />
           </Link>

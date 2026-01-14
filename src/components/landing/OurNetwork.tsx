@@ -3,9 +3,9 @@ import React from "react";
 const OurNetwork = () => {
   return (
     <div>
-      <div className="flex flex-col xl:flex-row items-center justify-center">
-        <div>
-          <div className="">
+      <div className="flex flex-col xl:flex-row xl:gap-30 items-center justify-center mx-5">
+        <div className="flex flex-col w-full lg:w-150 ">
+          <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 10 300 180"
@@ -71,7 +71,7 @@ const OurNetwork = () => {
               </text>
             </svg>
           </div>
-          <p className="w-full">
+          <p className="w-full lg:w-150">
             NEXA Network không chỉ là một Agency, chúng tôi là "kiến trúc sư"
             xây dựng cộng đồng và giá trị thương hiệu. Với mạng lưới kết nối sâu
             rộng trên các nền tảng TikTok, Facebook, Instagram và YouTube, chúng
@@ -169,8 +169,8 @@ const OurNetwork = () => {
                 y2="173.296"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#FFF200" />
-                <stop offset="1" stop-color="#F179AF" />
+                <stop stopColor="#FFF200" />
+                <stop offset="1" stopColor="#F179AF" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_7_1568"
@@ -180,8 +180,8 @@ const OurNetwork = () => {
                 y2="286.928"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#E37A25" />
-                <stop offset="1" stop-color="#F494BE" />
+                <stop stopColor="#E37A25" />
+                <stop offset="1" stopColor="#F494BE" />
               </linearGradient>
               <linearGradient
                 id="paint2_linear_7_1568"
@@ -191,8 +191,8 @@ const OurNetwork = () => {
                 y2="488.263"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#E0A9FC" />
-                <stop offset="1" stop-color="#8AE4F0" />
+                <stop stopColor="#E0A9FC" />
+                <stop offset="1" stopColor="#8AE4F0" />
               </linearGradient>
               <linearGradient
                 id="paint3_linear_7_1568"
