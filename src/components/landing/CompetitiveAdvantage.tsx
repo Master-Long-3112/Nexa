@@ -35,6 +35,7 @@ interface ContentCardProps {
   iconSrc: string;
   className?: string;
 }
+
 const ContentCard = ({
   title,
   description,
@@ -43,44 +44,44 @@ const ContentCard = ({
 }: ContentCardProps) => {
   return (
     <div
-      className={`@container relative aspect-37/10 w-full ${className}`}
+      className={`relative w-full min-h-[140px] md:min-h-[170px] ${className}`}
       style={{
         clipPath: "url(#content-mask)",
         WebkitClipPath: "url(#content-mask)",
       }}
     >
-      <svg
-        width="0"
-        height="0"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      {/* SVG defs – dùng chung */}
+      <svg width="0" height="0" aria-hidden="true">
         <defs>
           <clipPath id="content-mask" clipPathUnits="objectBoundingBox">
             <path d="M1 0.869C1 0.941 0.985 1 0.966 1H0.035C0.016 1 0 0.941 0 0.869V0.130C0 0.058 0.016 0 0.035 0H0.704C0.711 0 0.718 0.009 0.724 0.025L0.763 0.132C0.764 0.135 0.766 0.132 0.766 0.127C0.766 0.057 0.781 0 0.800 0H0.966C0.985 0 1 0.058 1 0.130V0.869Z" />
           </clipPath>
         </defs>
       </svg>
-      <div
-        className="absolute inset-0 w-full h-full"
-        style={{
-          clipPath: "url(#content-mask)",
-          WebkitClipPath: "url(#content-mask)",
-        }}
-      >
-        <p className="text-[4.5cqw] pt-[6cqw] ps-[4cqw] font-semibold">
+
+      {/* Content */}
+      <div className="relative w-full h-full p-[clamp(16px,3vw,28px)]">
+        <h3 className="font-semibold text-[clamp(18px,3vw,28px)] mb-2">
           {title}
+        </h3>
+
+        <p className="text-[clamp(14px,2.2vw,18px)] max-w-[80%] leading-relaxed">
+          {description}
         </p>
-        <p className="text-[2.5cqw] ps-[4cqw] mt-[3cqw]">{description}</p>
-        <div>
-          <Image
-            src={iconSrc}
-            alt={`${title} Icon`}
-            width={90}
-            height={90}
-            className="absolute top-[4cqw] end-[7cqw] w-[9cqw] h-[9cqw] object-contain"
-          />
-        </div>
+
+        <Image
+          src={iconSrc}
+          alt={`${title} icon`}
+          width={50}
+          height={50}
+          className="
+            absolute 
+            top-[clamp(16px,3vw,28px)]
+            right-[clamp(16px,3vw,28px)]
+
+            object-contain
+          "
+        />
       </div>
     </div>
   );
@@ -88,34 +89,29 @@ const ContentCard = ({
 
 const CompetitiveAdvantage = () => {
   return (
-    <div className="@cotainer px-25">
-      <div className="flex flex-col xl:flex-row items-center justify-center gap-10 mb-10">
-        <div>
-          <Image
-            width={260}
-            height={100}
-            alt="Nexa Logo"
-            src="/assets/icons/Nexa_Logo_Black.svg"
-          />
-        </div>
-        <div className="text-[75px] font-bold text-center">
+    <section className="max-w-7xl mx-auto">
+      {/* Header */}
+      <div className="flex flex-col xl:flex-row items-center justify-center xl:justify-between gap-8 mb-12">
+        <Image
+          width={220}
+          height={80}
+          alt="Nexa Logo"
+          src="/assets/icons/Nexa_Logo_Black.svg"
+        />
+
+        <h2 className="text-center font-bold text-[clamp(36px,6vw,72px)]">
           <span className="text-pink-400">LỢI THẾ </span>
           <span className="text-pink-200">CẠNH TRANH</span>
-        </div>
+        </h2>
       </div>
-      <div className="grid grid-cols-2 items-center justify-center gap-10">
+
+      {/* Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
         {content.map((item, index) => (
-          <div key={index}>
-            <ContentCard
-              title={item.title}
-              description={item.description}
-              iconSrc={item.iconSrc}
-              className={item.className}
-            />
-          </div>
+          <ContentCard key={index} {...item} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

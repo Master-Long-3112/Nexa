@@ -1,9 +1,77 @@
 import React from "react";
 
+const stats = [
+  {
+    value: "10.5B",
+    label: "views per month across platforms",
+  },
+  {
+    value: "96.5M",
+    label: "YouTube Subscribers",
+  },
+  {
+    value: "281M",
+    label: "Facebook Followers",
+  },
+  {
+    value: "290M",
+    label: "TikTok Followers",
+  },
+];
+
+const Badge = ({ icon, text }: { icon: string; text: string }) => {
+  return (
+    <div className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-full text-sm text-slate-700">
+      <span>{icon}</span>
+      <span className="font-medium">{text}</span>
+    </div>
+  );
+};
+
+const StatsBar = () => {
+  return (
+    <section className="w-full max-w-7xl mx-auto px-6 py-10">
+      {/* badges */}
+      <div className="flex items-center justify-center lg:justify-between mb-10">
+        <div className="flex items-center gap-4">
+          <Badge icon="🌐" text="World Class Agency" />
+          <Badge icon="👑" text="2023 Best Agency" />
+        </div>
+
+        {/* decorative line + circles */}
+        <div className="hidden xl:flex items-center gap-16 flex-1 ml-6">
+          <span className="h-px w-full bg-gray-300" />
+          <span className="relative h-9.75">
+            <span className="absolute top-[6px] right-[0px] w-[27px] h-[27px] rounded-full border border-gray-400" />
+            <span className="absolute top-[6px] right-[18px] w-[27px] h-[27px] rounded-full border border-gray-400" />
+            <span className="absolute top-[6px] right-[36px] w-[27px] h-[27px] rounded-full border border-gray-400" />
+          </span>
+        </div>
+      </div>
+
+      {/* stats */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 sm:border-b lg:border-b-0 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
+        {stats.map((item, index) => (
+          <div
+            key={index}
+            className="py-6 lg:py-0 lg:px-8 text-center lg:text-left"
+          >
+            <p className="text-4xl font-semibold text-slate-900">
+              {item.value}
+              <span className="text-red-500">+</span>
+            </p>
+            <p className="mt-2 text-sm text-gray-500">{item.label}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
 const OurNetwork = () => {
   return (
     <div>
-      <div className="flex flex-col xl:flex-row xl:gap-30 items-center justify-center mx-5">
+      <div className="flex flex-col xl:flex-row xl:gap-30 items-center justify-center max-w-7xl mx-auto">
         <div className="flex flex-col w-full lg:w-150 ">
           <div>
             <svg
@@ -258,6 +326,7 @@ const OurNetwork = () => {
           </svg>
         </div>
       </div>
+      <StatsBar />
     </div>
   );
 };

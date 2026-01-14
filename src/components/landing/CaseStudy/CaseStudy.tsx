@@ -17,7 +17,7 @@ const CaseStudy = () => {
   const [progress, setProgress] = useState(0);
 
   return (
-    <div className="px-24 bg-black text-white py-5 mb-5">
+    <div className=" px-24 bg-black text-white py-5 mb-5 max-w-7xl mx-auto">
       {/* Title */}
       <div className="relative py-10 mb-8">
         <div className="absolute top-17 w-28 h-[12px] bg-pink-300 rounded-full" />

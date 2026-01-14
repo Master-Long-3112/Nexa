@@ -17,10 +17,10 @@ export default function Home() {
       <Header />
       <Hero />
       <OurNetwork />
-      {/* <CompetitiveAdvantage /> */}
-      {/* <ForCreator /> */}
+      <CompetitiveAdvantage />
+      <ForCreator />
       {/* <ForBrand /> */}
-      <CaseStudy />
+      {/* <CaseStudy /> */}
       <Partner />
       {/* <ContactSection /> */}
 

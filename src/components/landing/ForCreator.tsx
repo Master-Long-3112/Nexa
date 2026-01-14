@@ -41,7 +41,7 @@ const SolutionCard = ({
           WebkitClipPath: "url(#content-mask)",
         }}
       >
-        <p className="text-[4.5cqw] pt-[6cqw] ps-[4cqw] font-semibold">
+        <p className="text-[4.5cqw] whitespace-pre-line max-w-[40cqw] pt-[6cqw] ps-[4cqw] font-semibold">
           {title}
         </p>
         <p className="text-[2.5cqw] ps-[4cqw] mt-[3cqw]">{description}</p>
@@ -61,60 +61,109 @@ const SolutionCard = ({
 
 const ForCreator = () => {
   return (
-    <div className="px-25">
-      <div className="relative">
-        <span className="absolute top-52 left- flex flex-col justify-between w-100">
-          <p className="text-md mb-3">
-            NEXA Network cung cấp cho người sáng tạo một hệ sinh thái toàn diện
-            để thúc đẩy sự phát triển nội dung, tương tác và kiếm tiền:
-          </p>
-          <a href="#" className="underline text-green-700">
-            Get In Touch
-          </a>
-        </span>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-        <SolutionCard
-          title="Content Creation Tools"
-          description="Truy cập các công cụ sáng tạo nội dung tiên tiến để tạo video, hình ảnh và bài viết hấp dẫn."
-          iconSrc="/assets/icons/solution-1-icon.svg"
-          className="bg-yellow-200"
-        />
-        <SolutionCard
-          title="Content Creation Tools"
-          description="Truy cập các công cụ sáng tạo nội dung tiên tiến để tạo video, hình ảnh và bài viết hấp dẫn."
-          iconSrc="/assets/icons/solution-1-icon.svg"
-          className="bg-yellow-200"
-        />
-        <SolutionCard
-          title="Content Creation Tools"
-          description="Truy cập các công cụ sáng tạo nội dung tiên tiến để tạo video, hình ảnh và bài viết hấp dẫn."
-          iconSrc="/assets/icons/solution-1-icon.svg"
-          className="bg-yellow-200"
-        />
-        <SolutionCard
-          title="Content Creation Tools"
-          description="Truy cập các công cụ sáng tạo nội dung tiên tiến để tạo video, hình ảnh và bài viết hấp dẫn."
-          iconSrc="/assets/icons/solution-1-icon.svg"
-          className="bg-yellow-200"
-        />
-
-        <div className="@container aspect-square bg-blue-300 rounded-[2cqw] ">
-          <p className="text-[4cqw]">Bổ Sung: Chính sách</p>
-          <p className="text-[2cqw]">
-            MCV hỗ trợ các đối tác nắm bắt và tuân thủ các chính sách của nền
-            tảng mạng xã hội, đảm bảo việc phân phối nội dung và kiếm tiền diễn
-            ra suôn sẻ.Chúng tôi luôn cập nhật các quy định mới nhất, cung cấp
-            hướng dẫn chuyên môn, cơ sở dữ liệu nghiên cứu trường hợp phong phú
-            và các buổi đào tạo thường xuyên.{" "}
-          </p>
+    <div className="max-w-7xl mx-auto bg-black px-10">
+      <div>
+        <div className="flex flex-col md:flex-row items-center text-white">
+          <span className="text-[clamp(1px,10vw,120px)] font-extrabold me-6">
+            FOR
+          </span>
+          <div className="flex items-center md:mt-0">
+            <span className="text-[clamp(1px,10vw,120px)] font-extrabold">
+              CREAT
+            </span>
+            <span>
+              <Image
+                src="/assets/icons/Letter_O.svg"
+                alt="heart icon"
+                width={90}
+                height={90}
+                className="inline-block w-[clamp(1px,8vw,90px)] h-[clamp(1px,8vw,90px)]"
+              />
+            </span>
+            <span className="text-[clamp(1px,10vw,120px)] font-extrabold">
+              RS
+            </span>
+          </div>
         </div>
-        <div className="grid grid-cols-4 grid-rows-4 gap-5">
-          <div className="col-span-3 row-span-3 aspect-square rounded-3xl bg-amber-400"></div>
-          <div className="col-span-1 row-span-3 rounded-3xl bg-blue-700"></div>
-          <div className="col-span-1 row-span-1 rounded-3xl bg-cyan-300"></div>
-          <div className="col-span-3 row-span-1 rounded-3xl bg-pink-500"></div>
+        <div className="flex flex-col lg:flex-row items-center md:items-start lg:items-center justify-between lg:gap-10 text-white">
+          <span className="text-[clamp(1px,10vw,120px)] font-extrabold ">
+            SOLUTION
+          </span>
+          <span className="max-w-110">
+            <p className="mb-5">
+              NEXA Network cung cấp cho người sáng tạo một hệ sinh thái toàn
+              diện để thúc đẩy sự phát triển nội dung, tương tác và kiếm tiền:
+            </p>
+            <a href="#" className="underline">
+              Get In Touch
+            </a>
+          </span>
+        </div>
+        <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-10 text-white">
+            <SolutionCard
+              title={`Đào tạo \n & Định hướng`}
+              description="Hỗ trợ ý tưởng, sản xuất và tối ưu hóa nội dung để tăng tương tác."
+              iconSrc="/assets/icons/Content_Development.svg"
+              className="bg-[#E37A25]"
+            />
+            <SolutionCard
+              title={`Phát triển \n nội dung`}
+              description="Chiến lược tăng trưởng khán giả tùy chỉnh để mở rộng phạm vi tiếp cận."
+              iconSrc="/assets/icons/Audience_Growth.svg"
+              className="bg-[#7897EC]"
+            />
+            <SolutionCard
+              title={`Quản lý \n & độc quyền`}
+              description="Đa dạng hóa nguồn thu nhập thông qua các kênh kiếm tiền khác nhau."
+              iconSrc="/assets/icons/Monetization.svg"
+              className="bg-[#9960FF]"
+            />
+            <SolutionCard
+              title={`Kết nối \n nhãn hàng`}
+              description="Kết nối với các thương hiệu hàng đầu để hợp tác và tài trợ."
+              iconSrc="/assets/icons/Brand_Collaboration.svg"
+              className="bg-[#FF66A9]"
+            />
+            <div className="aspect-square bg-black rounded-3xl text-white px-20 flex flex-col justify-center gap-10">
+              <div>
+                <Image
+                  src="/assets/icons/policy_icon.svg"
+                  alt="policy icon"
+                  width={150}
+                  height={150}
+                  className="inline-block"
+                />
+              </div>
+              <h3 className="text-4xl">Bổ sung: Chính sách</h3>
+              <p className="whitespace-pre-line">
+                {`MCV hỗ trợ các đối tác nắm bắt và tuân thủ các chính sách của nền tảng mạng xã hội, đảm bảo việc phân phối nội dung và kiếm tiền diễn ra suôn sẻ. \n\nChúng tôi luôn cập nhật các quy định mới nhất, cung cấp hướng dẫn chuyên môn, cơ sở dữ liệu nghiên cứu trường hợp phong phú và các buổi đào tạo thường xuyên. `}
+              </p>
+              <p></p>
+            </div>
+            <div className="grid grid-col-1 lg:grid-cols-4 lg:grid-rows-4 gap-2">
+              <div className="hidden lg:block col-span-1 aspect-square lg:col-span-3 lg:row-span-3 bg-pink-300 rounded-3xl"></div>
+              <div className="hidden lg:block lg:col-span-1 lg:row-span-3 bg-pink-300 rounded-3xl"></div>
+              <div className="hidden lg:block lg:col-span-1 lg:row-span-1 bg-pink-300 rounded-3xl"></div>
+              <div className="col-span-1 lg:col-span-3 lg:row-span-1 bg-pink-400 rounded-3xl flex items-center justify-center text-2xl underline">
+                Get Expert Guidance Now
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1"
+                  stroke="currentColor"
+                  className="size-12 transform rotate-45 ms-2 inline-block"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

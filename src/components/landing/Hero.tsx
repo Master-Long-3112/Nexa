@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="relative h-[80vh] min-h-105 overflow-hidden">
+    <section className="relative aspect-[16/9] max-w-7xl mx-auto overflow-hidden">
       <video
         autoPlay
         muted
@@ -10,7 +10,7 @@ const Hero = () => {
         playsInline
         preload="auto"
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover min-h-105"
+        className="absolute h-full w-full object-cover"
       >
         <source src="/assets/videos/Hero_Video.mp4" type="video/mp4" />
       </video>
