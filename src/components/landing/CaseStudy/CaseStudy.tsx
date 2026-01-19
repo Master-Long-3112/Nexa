@@ -26,12 +26,26 @@ const CaseStudy = () => {
 
       {/* Swiper */}
       <Swiper
-        slidesPerView={4}
+        slidesPerView={1.2}
         spaceBetween={20}
         freeMode
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         onProgress={(_, p) => setProgress(p)}
         modules={[FreeMode]}
+        breakpoints={{
+          0: {
+            slidesPerView: 1.2,
+          },
+          640: {
+            slidesPerView: 2.2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        }}
       >
         {idolImages.map((idol, i) => (
           <SwiperSlide key={i}>

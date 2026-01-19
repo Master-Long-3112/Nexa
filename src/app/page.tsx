@@ -20,9 +20,9 @@ export default function Home() {
       <CompetitiveAdvantage />
       <ForCreator />
       {/* <ForBrand /> */}
-      {/* <CaseStudy /> */}
+      <CaseStudy />
       <Partner />
-      {/* <ContactSection /> */}
+      <ContactSection />
 
       <Footer />
     </div>

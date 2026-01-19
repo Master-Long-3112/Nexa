@@ -125,7 +125,7 @@ const ForCreator = () => {
               iconSrc="/assets/icons/Brand_Collaboration.svg"
               className="bg-[#FF66A9]"
             />
-            <div className="aspect-square bg-black rounded-3xl text-white px-20 flex flex-col justify-center gap-10">
+            <div className="aspect-square bg-[#252525] rounded-3xl text-white px-20 flex flex-col justify-center gap-10">
               <div>
                 <Image
                   src="/assets/icons/policy_icon.svg"
@@ -142,7 +142,7 @@ const ForCreator = () => {
               <p></p>
             </div>
             <div className="grid grid-col-1 lg:grid-cols-4 lg:grid-rows-4 gap-2">
-              <div className="hidden lg:block col-span-1 aspect-square lg:col-span-3 lg:row-span-3 bg-pink-300 rounded-3xl"></div>
+              <div className="hidden lg:block col-span-1 lg:col-span-3 lg:row-span-3 bg-pink-300 rounded-3xl"></div>
               <div className="hidden lg:block lg:col-span-1 lg:row-span-3 bg-pink-300 rounded-3xl"></div>
               <div className="hidden lg:block lg:col-span-1 lg:row-span-1 bg-pink-300 rounded-3xl"></div>
               <div className="col-span-1 lg:col-span-3 lg:row-span-1 bg-pink-400 rounded-3xl flex items-center justify-center text-2xl underline">
@@ -151,13 +151,13 @@ const ForCreator = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1"
+                  strokeWidth="1"
                   stroke="currentColor"
                   className="size-12 transform rotate-45 ms-2 inline-block"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                   />
                 </svg>

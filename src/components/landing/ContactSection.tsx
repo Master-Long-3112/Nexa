@@ -31,7 +31,7 @@ const FormTab = () => {
           <p>Brand</p>
         </div>
       </div>
-      <form className="max-w-2xl w-full space-y-8">
+      <form className="w-full space-y-8 mt-8">
         {/* Email */}
         <div>
           <label htmlFor="email" className="block text-[#1E2546] font-semibold">
@@ -95,25 +95,23 @@ const FormTab = () => {
 
 const ContactSection = () => {
   return (
-    <div className="flex mx-auto mb-4 items-center justify-center overflow-hidden">
-      <div className="flex items-center justify-center bg-[#F1F6F7] rounded-2xl">
-        <div className="relative w-170 rounded-l-2xl overflow-hidden">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            aria-hidden="true"
-            className="h-full object-fit object-left"
-          >
-            <source src="/assets/videos/Contact_Video.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div className="w-130 px-10">
-          {/* name of each tab group should be unique */}
-          <FormTab />
-        </div>
+    <div className="flex flex-col xl:flex-row items-center justify-center bg-[#F1F6F7] rounded-2xl max-w-7xl mx-auto">
+      <div className="xl:flex-7 relative w-full rounded-l-2xl overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+          className="h-full object-fit object-left"
+        >
+          <source src="/assets/videos/Contact_Video.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div className="xl:flex-5 w-full px-10">
+        {/* name of each tab group should be unique */}
+        <FormTab />
       </div>
     </div>
   );

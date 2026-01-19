@@ -47,9 +47,9 @@ const Partner = () => {
       </div>
 
       {/* Partners Section */}
-      <div className="flex flex-col xl:flex-row gap-10 my-20 px-25">
+      <div className="flex flex-col xl:flex-row justify-center items-center gap-10 my-20 mx-auto max-w-7xl">
         {/* Responsive video wrapper */}
-        <div className="flex-7 relative w-full aspect-video rounded-sm overflow-hidden">
+        <div className="flex-7 relative w-full rounded-sm overflow-hidden">
           <video
             autoPlay
             muted
@@ -57,21 +57,23 @@ const Partner = () => {
             playsInline
             preload="auto"
             aria-hidden="true"
-            className="h-full w-full object-cover"
+            className="h-full object-cover"
           >
             <source src="/assets/videos/Partner_Video.mp4" type="video/mp4" />
           </video>
         </div>
 
-        <div className="flex-5 flex flex-col justify-between">
+        <div className="flex-5 flex-col justify-between">
           {/* Media */}
           <div className="border-b-2 border-gray-300 py-5">
-            <p className="font-bold text-xl">Media Partners</p>
-            <div className="grid grid-cols-5 gap-5 mt-5">
+            <p className="font-bold text-7xl text-center xl:text-2xl xl:text-start">
+              Media Partner
+            </p>
+            <div className="grid grid-cols-2 xl:grid-cols-5  gap-5 mt-5">
               {mediaPartners.map((src, index) => (
                 <div
                   key={`media-partner-${index}`}
-                  className="relative w-full aspect-[170/45] p-1 bg-white"
+                  className="relative w-[40vw] xl:w-auto aspect-[170/40] p-1 bg-white"
                 >
                   <Image
                     src={src}
@@ -83,14 +85,15 @@ const Partner = () => {
               ))}
             </div>
           </div>
-          {/* Media */}
           <div className="border-b-2 border-gray-300 py-5">
-            <p className="font-bold text-xl">Media Partners</p>
-            <div className="grid grid-cols-5 gap-5 mt-5">
+            <p className="font-bold text-7xl text-center xl:text-2xl xl:text-start">
+              Media Partner
+            </p>
+            <div className="grid grid-cols-2 xl:grid-cols-5  gap-5 mt-5">
               {mediaPartners.map((src, index) => (
                 <div
                   key={`media-partner-${index}`}
-                  className="relative w-full aspect-[170/45] p-1 bg-white"
+                  className="relative w-[40vw] xl:w-auto aspect-[170/40] p-1 bg-white"
                 >
                   <Image
                     src={src}
@@ -102,14 +105,15 @@ const Partner = () => {
               ))}
             </div>
           </div>
-          {/* Media */}
-          <div className=" py-5">
-            <p className="font-bold text-xl">Media Partners</p>
-            <div className="grid grid-cols-5 gap-5 mt-5">
+          <div className="border-b-2 border-gray-300 py-5">
+            <p className="font-bold text-7xl text-center xl:text-2xl xl:text-start">
+              Media Partner
+            </p>
+            <div className="grid grid-cols-2 xl:grid-cols-5  gap-5 mt-5">
               {mediaPartners.map((src, index) => (
                 <div
                   key={`media-partner-${index}`}
-                  className="relative w-full aspect-[170/45] p-1 bg-white"
+                  className="relative w-[40vw] xl:w-auto aspect-[170/40] p-1 bg-white"
                 >
                   <Image
                     src={src}
