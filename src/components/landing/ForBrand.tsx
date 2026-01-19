@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 const services = [
   {
     title: "Booking & Campaign\nManagement",
@@ -21,38 +23,52 @@ const services = [
 
 export default function ForBrand() {
   return (
-    <section className="mx-25 bg-pink-500  py-12">
+    <section className="max-w-7xl mx-auto bg-pink-500 py-20 px-20">
       <div>
-        <svg viewBox="0 0 1200 250">
-          <text
-            x="0"
-            y="80"
-            className="fill-black font-bold tracking-wide"
-            fontSize="120"
-            dominantBaseline="middle"
-          >
-            FOR BRANDS
-          </text>
-          <text
-            x="0"
-            y="200"
-            className="fill-black font-bold tracking-wide"
-            fontSize="120"
-            dominantBaseline="middle"
-          >
-            OUR SERVICES
-          </text>
-        </svg>
+        <div className="flex">
+          <span className="text-[clamp(1px,10vw,110px)] font-extrabold me-6">
+            FOR
+          </span>
+          <div className="flex items-center md:mt-0">
+            <span className="flex text-[clamp(1px,10vw,110px)] font-extrabold items-end">
+              <span className="whitespace-nowrap">
+                BRANDS{" "}
+                <Image
+                  src="/assets/icons/ForBrandIcon1.svg"
+                  alt="heart icon"
+                  width={90}
+                  height={90}
+                  className="inline-block w-[1.8em] h-[1.8em]"
+                />
+              </span>
+            </span>
+          </div>
+        </div>
+        <div className="flex flex-wrap">
+          <span className="text-[clamp(1px,10vw,110px)] font-extrabold me-6 flex items-center">
+            OUR
+            <Image
+              src="/assets/icons/ForBrandIcon2.svg"
+              alt="heart icon"
+              width={90}
+              height={90}
+              className="inline-block w-[1.2em] h-[1.2em] ms-[0.2em]"
+            />
+          </span>
+          <span className="text-[clamp(1px,10vw,110px)] font-extrabold me-6">
+            SERVICES
+          </span>
+        </div>
       </div>
       <div className="flex items-center justify-between mb-5">
-        <div className="items-center bg-white text-pink-500 text-2xl font-semibold rounded-full inline-flex justify-between gap-10 px-10 py-3">
-          <span>Get In Touch</span>
+        <div className="flex items-center bg-white text-pink-500 text-xl font-semibold rounded-full justify-end gap-5 ps-10 pe-3 py-2">
+          <span className="whitespace-nowrap">Get In Touch</span>
           <button className="shrink-0 w-12 h-12 rounded-full bg-pink-500 flex items-center justify-center text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               className="size-6"
             >
@@ -90,13 +106,13 @@ export default function ForBrand() {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
                 className="size-6"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
                 />
               </svg>

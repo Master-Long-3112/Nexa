@@ -61,36 +61,32 @@ const SolutionCard = ({
 
 const ForCreator = () => {
   return (
-    <div className="max-w-7xl mx-auto bg-black px-10">
+    <div className="max-w-7xl mx-auto px-20 py-20 bg-black">
       <div>
         <div className="flex flex-col md:flex-row items-center text-white">
-          <span className="text-[clamp(1px,10vw,120px)] font-extrabold me-6">
+          <span className="text-[clamp(1px,10vw,110px)] font-extrabold me-6">
             FOR
           </span>
           <div className="flex items-center md:mt-0">
-            <span className="text-[clamp(1px,10vw,120px)] font-extrabold">
+            <span className="flex text-[clamp(1px,10vw,100px)] font-extrabold items-center">
               CREAT
-            </span>
-            <span>
               <Image
                 src="/assets/icons/Letter_O.svg"
                 alt="heart icon"
                 width={90}
                 height={90}
-                className="inline-block w-[clamp(1px,8vw,90px)] h-[clamp(1px,8vw,90px)]"
+                className="inline-block w-[0.8em] h-[0.8em]"
               />
-            </span>
-            <span className="text-[clamp(1px,10vw,120px)] font-extrabold">
               RS
             </span>
           </div>
         </div>
         <div className="flex flex-col lg:flex-row items-center md:items-start lg:items-center justify-between lg:gap-10 text-white">
-          <span className="text-[clamp(1px,10vw,120px)] font-extrabold ">
+          <span className="text-[clamp(1px,10vw,110px)] font-extrabold ">
             SOLUTION
           </span>
           <span className="max-w-110">
-            <p className="mb-5">
+            <p className="mb-5 text-sm">
               NEXA Network cung cấp cho người sáng tạo một hệ sinh thái toàn
               diện để thúc đẩy sự phát triển nội dung, tương tác và kiếm tiền:
             </p>

@@ -30,7 +30,7 @@ const Badge = ({ icon, text }: { icon: string; text: string }) => {
 
 const StatsBar = () => {
   return (
-    <section className="w-full max-w-7xl mx-auto px-6 py-10">
+    <section className="w-full max-w-7xl mx-auto py-10 ">
       {/* badges */}
       <div className="flex items-center justify-center lg:justify-between mb-10">
         <div className="flex items-center gap-4">
@@ -70,9 +70,9 @@ const StatsBar = () => {
 
 const OurNetwork = () => {
   return (
-    <div>
-      <div className="flex flex-col xl:flex-row xl:gap-30 items-center justify-center max-w-7xl mx-auto">
-        <div className="flex flex-col w-full lg:w-150 ">
+    <div className="max-w-7xl mx-auto px-20 py-20">
+      <div className="flex flex-col xl:flex-row xl:gap-30 items-center justify-between">
+        <div className="flex flex-col w-full">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +148,7 @@ const OurNetwork = () => {
           </p>
         </div>
 
-        <div className="relative max-w-screen h-120 aspect-square my-5">
+        <div className="relative max-w-screen lg:h-100 aspect-square my-5">
           {/* SVG nền */}
           <svg
             viewBox="0 0 504 504"

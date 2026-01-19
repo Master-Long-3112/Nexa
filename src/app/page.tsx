@@ -19,8 +19,8 @@ export default function Home() {
       <OurNetwork />
       <CompetitiveAdvantage />
       <ForCreator />
-      {/* <ForBrand /> */}
       <CaseStudy />
+      <ForBrand />
       <Partner />
       <ContactSection />
 
