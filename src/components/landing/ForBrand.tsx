@@ -23,14 +23,14 @@ const services = [
 
 export default function ForBrand() {
   return (
-    <section className="max-w-7xl mx-auto bg-pink-500 py-20 px-20">
+    <section className="max-w-7xl mx-auto bg-[#F05C90] py-20 px-20">
       <div>
         <div className="flex">
-          <span className="text-[clamp(1px,10vw,110px)] font-extrabold me-6">
+          <span className="text-[clamp(1px,10vw,110px)] font-extrabold me-6 text-[#FBB7C3]">
             FOR
           </span>
           <div className="flex items-center md:mt-0">
-            <span className="flex text-[clamp(1px,10vw,110px)] font-extrabold items-end">
+            <span className="flex text-[clamp(1px,10vw,110px)] font-extrabold items-end text-white">
               <span className="whitespace-nowrap">
                 BRANDS{" "}
                 <Image
@@ -44,19 +44,22 @@ export default function ForBrand() {
             </span>
           </div>
         </div>
-        <div className="flex flex-wrap">
-          <span className="text-[clamp(1px,10vw,110px)] font-extrabold me-6 flex items-center">
+        <div className="flex flex-wrap -mt-20">
+          <span className="text-[clamp(1px,10vw,110px)] font-extrabold me-6 flex items-center text-white">
             OUR
             <Image
               src="/assets/icons/ForBrandIcon2.svg"
               alt="heart icon"
-              width={90}
-              height={90}
-              className="inline-block w-[1.2em] h-[1.2em] ms-[0.2em]"
+              width={70}
+              height={70}
+              className="inline-block w-[0.9em] h-[0.9em] ms-[0.2em]"
             />
           </span>
-          <span className="text-[clamp(1px,10vw,110px)] font-extrabold me-6">
-            SERVICES
+          <span className="text-[clamp(1px,10vw,110px)] font-extrabold me-6 text-white">
+            SERVI
+            <span className="text-[clamp(1px,10vw,110px)] font-extrabold me-6 text-[#FBB7C3]">
+              CES
+            </span>
           </span>
         </div>
       </div>
@@ -77,7 +80,7 @@ export default function ForBrand() {
           </button>
         </div>
         <div>
-          <p className="w-180 mx-20">
+          <p className="w-180 mx-20 text-white text-sm">
             NEXA Network cung cấp cho các thương hiệu một hệ sinh thái toàn diện
             gồm truyền thông, công nghệ và tiếp thị người ảnh hưởng để tối đa
             hóa khả năng hiển thị, tương tác và doanh số bán hàng.

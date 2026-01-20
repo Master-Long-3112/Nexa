@@ -67,7 +67,7 @@ const Partner = () => {
           {/* Media */}
           <div className="border-b-2 border-gray-300 py-5">
             <p className="font-bold text-7xl text-center xl:text-2xl xl:text-start">
-              Media Partner
+              Media Partners
             </p>
             <div className="grid grid-cols-2 xl:grid-cols-5  gap-5 mt-5">
               {mediaPartners.map((src, index) => (
@@ -87,7 +87,7 @@ const Partner = () => {
           </div>
           <div className="border-b-2 border-gray-300 py-5">
             <p className="font-bold text-7xl text-center xl:text-2xl xl:text-start">
-              Media Partner
+              Brands
             </p>
             <div className="grid grid-cols-2 xl:grid-cols-5  gap-5 mt-5">
               {mediaPartners.map((src, index) => (
@@ -107,7 +107,7 @@ const Partner = () => {
           </div>
           <div className="border-b-2 border-gray-300 py-5">
             <p className="font-bold text-7xl text-center xl:text-2xl xl:text-start">
-              Media Partner
+              Platform Partners
             </p>
             <div className="grid grid-cols-2 xl:grid-cols-5  gap-5 mt-5">
               {mediaPartners.map((src, index) => (

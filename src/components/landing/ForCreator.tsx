@@ -68,14 +68,14 @@ const ForCreator = () => {
             FOR
           </span>
           <div className="flex items-center md:mt-0">
-            <span className="flex text-[clamp(1px,10vw,100px)] font-extrabold items-center">
+            <span className="flex text-[clamp(1px,10vw,100px)] font-extrabold items-baseline">
               CREAT
               <Image
                 src="/assets/icons/Letter_O.svg"
                 alt="heart icon"
                 width={90}
                 height={90}
-                className="inline-block w-[0.8em] h-[0.8em]"
+                className="w-[0.75em] h-[0.75em]"
               />
               RS
             </span>
@@ -90,35 +90,35 @@ const ForCreator = () => {
               NEXA Network cung cấp cho người sáng tạo một hệ sinh thái toàn
               diện để thúc đẩy sự phát triển nội dung, tương tác và kiếm tiền:
             </p>
-            <a href="#" className="underline">
+            <a href="#" className="underline text-[#D2EF25] ">
               Get In Touch
             </a>
           </span>
         </div>
         <div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-10 text-white">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-10 text-white">
             <SolutionCard
               title={`Đào tạo \n & Định hướng`}
               description="Hỗ trợ ý tưởng, sản xuất và tối ưu hóa nội dung để tăng tương tác."
-              iconSrc="/assets/icons/Content_Development.svg"
+              iconSrc="/assets/icons/ForCreatorIcon1.svg"
               className="bg-[#E37A25]"
             />
             <SolutionCard
               title={`Phát triển \n nội dung`}
               description="Chiến lược tăng trưởng khán giả tùy chỉnh để mở rộng phạm vi tiếp cận."
-              iconSrc="/assets/icons/Audience_Growth.svg"
+              iconSrc="/assets/icons/ForCreatorIcon2.svg"
               className="bg-[#7897EC]"
             />
             <SolutionCard
               title={`Quản lý \n & độc quyền`}
               description="Đa dạng hóa nguồn thu nhập thông qua các kênh kiếm tiền khác nhau."
-              iconSrc="/assets/icons/Monetization.svg"
+              iconSrc="/assets/icons/ForCreatorIcon3.svg"
               className="bg-[#9960FF]"
             />
             <SolutionCard
               title={`Kết nối \n nhãn hàng`}
               description="Kết nối với các thương hiệu hàng đầu để hợp tác và tài trợ."
-              iconSrc="/assets/icons/Brand_Collaboration.svg"
+              iconSrc="/assets/icons/ForCreatorIcon4.svg"
               className="bg-[#FF66A9]"
             />
             <div className="aspect-square bg-[#252525] rounded-3xl text-white px-20 flex flex-col justify-center gap-10">
@@ -138,10 +138,26 @@ const ForCreator = () => {
               <p></p>
             </div>
             <div className="grid grid-col-1 lg:grid-cols-4 lg:grid-rows-4 gap-2">
-              <div className="hidden lg:block col-span-1 lg:col-span-3 lg:row-span-3 bg-pink-300 rounded-3xl"></div>
+              <div className="hidden relative lg:block col-span-1 lg:col-span-3 lg:row-span-3 bg-pink-300 rounded-3xl overflow-hidden">
+                <Image
+                  alt="model"
+                  src="/assets/images/ForCreatorModel.svg"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <div className="hidden lg:block lg:col-span-1 lg:row-span-3 bg-pink-300 rounded-3xl"></div>
-              <div className="hidden lg:block lg:col-span-1 lg:row-span-1 bg-pink-300 rounded-3xl"></div>
-              <div className="col-span-1 lg:col-span-3 lg:row-span-1 bg-pink-400 rounded-3xl flex items-center justify-center text-2xl underline">
+              <div className="hidden lg:flex lg:col-span-1 lg:row-span-1 bg-[#FA0294] rounded-3xl items-center justify-center">
+                <div className="relative w-[50%] aspect-square m-auto">
+                  <Image
+                    alt="model"
+                    src="/assets/icons/ForCreatorShape.svg"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              <div className="col-span-1 lg:col-span-3 lg:row-span-1 bg-[#FFD52E] rounded-3xl flex items-center justify-center text-2xl underline text-black">
                 Get Expert Guidance Now
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

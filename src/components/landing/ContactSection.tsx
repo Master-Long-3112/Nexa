@@ -95,7 +95,7 @@ const FormTab = () => {
 
 const ContactSection = () => {
   return (
-    <div className="flex flex-col xl:flex-row items-center justify-center bg-[#F1F6F7] rounded-2xl max-w-7xl mx-auto">
+    <div className="flex flex-col xl:flex-row items-center justify-center bg-[#F1F6F7] rounded-2xl max-w-7xl mx-auto mb-30">
       <div className="xl:flex-7 relative w-full rounded-l-2xl overflow-hidden">
         <video
           autoPlay

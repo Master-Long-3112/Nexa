@@ -50,11 +50,11 @@ const StatsBar = () => {
       </div>
 
       {/* stats */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 sm:border-b lg:border-b-0 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
+      <div className="grid grid-cols-1 sm:grid-cols-2 sm:border-b lg:border-b-0 lg:grid-cols-4 divide-y lg:divide-y-0 divide-gray-200 place-items-center">
         {stats.map((item, index) => (
           <div
             key={index}
-            className="py-6 lg:py-0 lg:px-8 text-center lg:text-left"
+            className={`py-6 lg:py-0 lg:px-8 w-full text-center ${index % 4 == 3 ? "text-right" : ""} ${index % 4 == 0 ? "text-left" : ""} lg:border-r last:border-r-0 border-gray-200`}
           >
             <p className="text-4xl font-semibold text-slate-900">
               {item.value}
@@ -79,18 +79,23 @@ const OurNetwork = () => {
               viewBox="0 10 300 180"
               className="w-full h-full"
             >
-              <circle cx="30" cy="68" r="3" fill="#000000" />
-              <circle cx="10" cy="68" r="3" fill="#000000" />
+              <circle cx="30" cy="68" r="3" fill="#F05C90" />
+              <circle cx="10" cy="68" r="3" fill="#F05C90" />
 
-              <foreignObject width="170" height="35" x="130" y="75">
-                <div className="relative w-full h-full rounded-full overflow-hidden">
+              <foreignObject width="150" height="30" x="120" y="81">
+                <div
+                  className="relative flex items-center w-full h-full"
+                  style={{
+                    clipPath: "inset(0 round 9999px)",
+                  }}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="#FFFFFF"
-                    className="absolute size-9"
+                    className="absolute size-8"
                   >
                     <path
                       strokeLinecap="round"
@@ -110,7 +115,7 @@ const OurNetwork = () => {
                     muted
                     loop
                     playsInline
-                    className="w-full h-auto rounded-xl"
+                    className="object-cover object-center w-[110%] h-[110%]"
                   >
                     <source
                       src="assets/videos/Network_Effect.mp4"
@@ -122,7 +127,7 @@ const OurNetwork = () => {
               <text
                 x="0"
                 y="100"
-                className="fill-black font-bold tracking-wide"
+                className="fill-[#F05C90] font-black tracking-wide"
                 fontSize="50"
                 dominantBaseline="middle"
               >
@@ -131,7 +136,7 @@ const OurNetwork = () => {
               <text
                 x="0"
                 y="150"
-                className="fill-black font-bold tracking-wide"
+                className="fill-[#FBB7C3] font-black tracking-wide"
                 fontSize="50"
                 dominantBaseline="middle"
               >
@@ -140,11 +145,11 @@ const OurNetwork = () => {
             </svg>
           </div>
           <p className="w-full lg:w-150">
-            NEXA Network không chỉ là một Agency, chúng tôi là "kiến trúc sư"
-            xây dựng cộng đồng và giá trị thương hiệu. Với mạng lưới kết nối sâu
-            rộng trên các nền tảng TikTok, Facebook, Instagram và YouTube, chúng
-            tôi hiểu cách để biến một nội dung trở thành xu hướng và biến một
-            thương hiệu trở thành biểu tượng.
+            NEXA Network không chỉ là một Agency, chúng tôi là &quot;kiến trúc
+            sư&quot; xây dựng cộng đồng và giá trị thương hiệu. Với mạng lưới
+            kết nối sâu rộng trên các nền tảng TikTok, Facebook, Instagram và
+            YouTube, chúng tôi hiểu cách để biến một nội dung trở thành xu hướng
+            và biến một thương hiệu trở thành biểu tượng.
           </p>
         </div>
 
