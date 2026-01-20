@@ -46,6 +46,13 @@ const IdolCard = ({ imageSrc, altText, textColorCode }: IProps) => {
           }}
         />
       </div>
+            <Image
+        alt="logo"
+        src="/assets/icons/NexaLogoOnly.svg"
+        width={60}
+        height={60}
+        className="absolute z-20 bottom-4 end-3 w-[30%] h-[20%]"
+      />
 
       {/* TEXT */}
       <svg
@@ -71,6 +78,7 @@ const IdolCard = ({ imageSrc, altText, textColorCode }: IProps) => {
           {altText}
         </text>
       </svg>
+
     </div>
   );
 };
