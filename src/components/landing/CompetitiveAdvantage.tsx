@@ -6,26 +6,26 @@ const content = [
     title: "Mạng lưới",
     description: "Kết nối đa dạng từ Nano đến Mega Influencers",
     iconSrc: "/assets/icons/network_icon.svg",
-    className: "bg-pink-100",
+    className: "bg-[#FFEFF2]",
   },
   {
     title: "Công nghệ",
     description: "Nền tảng quản lý chiến dịch và đo lường hiệu quả tiên tiến",
     iconSrc: "/assets/icons/technology_icon.svg",
-    className: "bg-pink-300",
+    className: "bg-[#FBBBC7]",
   },
   {
     title: "Tận tâm",
     description:
       "Kinh nghiệm sâu rộng trong lĩnh vực marketing và quản lý Influencer",
     iconSrc: "/assets/icons/dedicated_icon.svg",
-    className: "bg-pink-300",
+    className: "bg-[#FBBBC7]",
   },
   {
     title: "Hiệu quả",
     description: "Từ tư vấn chiến lược đến triển khai và tối ưu hóa chiến dịch",
     iconSrc: "/assets/icons/effective_icon.svg",
-    className: "bg-pink-100",
+    className: "bg-[#FFEFF2]",
   },
 ];
 
@@ -100,8 +100,8 @@ const CompetitiveAdvantage = () => {
         />
 
         <h2 className="text-center font-bold text-[clamp(36px,6vw,72px)]">
-          <span className="text-pink-400">LỢI THẾ </span>
-          <span className="text-pink-200">CẠNH TRANH</span>
+          <span className="text-[#F05C90] font-extrabold">LỢI THẾ </span>
+          <span className="text-[#FBB7C3] font-extrabold">CẠNH TRANH</span>
         </h2>
       </div>
 
