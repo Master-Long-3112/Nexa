@@ -58,7 +58,7 @@ const StatsBar = () => {
           >
             <p className="text-4xl font-semibold text-slate-900">
               {item.value}
-              <span className="text-red-500">+</span>
+              <span className="text-[#8E7FF0]">+</span>
             </p>
             <p className="mt-2 text-sm text-gray-500">{item.label}</p>
           </div>
@@ -79,8 +79,8 @@ const OurNetwork = () => {
               viewBox="0 10 300 180"
               className="w-full h-full"
             >
-              <circle cx="30" cy="68" r="3" fill="#F05C90" />
-              <circle cx="10" cy="68" r="3" fill="#F05C90" />
+              <circle cx="30" cy="68" r="3" fill="#8E7FF0" />
+              <circle cx="10" cy="68" r="3" fill="#8E7FF0" />
 
               <foreignObject width="150" height="30" x="120" y="81">
                 <div
@@ -127,7 +127,7 @@ const OurNetwork = () => {
               <text
                 x="0"
                 y="100"
-                className="fill-[#F05C90] font-black tracking-wide"
+                className="fill-[#8E7FF0] font-black tracking-wide"
                 fontSize="50"
                 dominantBaseline="middle"
               >
@@ -136,7 +136,7 @@ const OurNetwork = () => {
               <text
                 x="0"
                 y="150"
-                className="fill-[#FBB7C3] font-black tracking-wide"
+                className="fill-[#BBB0FF] font-black tracking-wide"
                 fontSize="50"
                 dominantBaseline="middle"
               >

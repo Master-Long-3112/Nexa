@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="relative aspect-[16/9] max-w-7xl mx-auto overflow-hidden">
+    <section className="relative aspect-16/9 max-w-full mx-auto overflow-hidden">
       <video
         autoPlay
         muted

@@ -6,26 +6,26 @@ const content = [
     title: "Mạng lưới",
     description: "Kết nối đa dạng từ Nano đến Mega Influencers",
     iconSrc: "/assets/icons/network_icon.svg",
-    className: "bg-[#FFEFF2]",
+    className: "bg-[#BBB0FF]",
   },
   {
     title: "Công nghệ",
     description: "Nền tảng quản lý chiến dịch và đo lường hiệu quả tiên tiến",
     iconSrc: "/assets/icons/technology_icon.svg",
-    className: "bg-[#FBBBC7]",
+    className: "bg-[#8E7FF0]",
   },
   {
     title: "Tận tâm",
     description:
       "Kinh nghiệm sâu rộng trong lĩnh vực marketing và quản lý Influencer",
     iconSrc: "/assets/icons/dedicated_icon.svg",
-    className: "bg-[#FBBBC7]",
+    className: "bg-[#8E7FF0]",
   },
   {
     title: "Hiệu quả",
     description: "Từ tư vấn chiến lược đến triển khai và tối ưu hóa chiến dịch",
     iconSrc: "/assets/icons/effective_icon.svg",
-    className: "bg-[#FFEFF2]",
+    className: "bg-[#BBB0FF]",
   },
 ];
 
@@ -78,7 +78,6 @@ const ContentCard = ({
             absolute 
             top-[clamp(16px,3vw,28px)]
             right-[clamp(16px,3vw,28px)]
-
             object-contain
           "
         />
@@ -91,22 +90,22 @@ const CompetitiveAdvantage = () => {
   return (
     <section className="max-w-7xl mx-auto pb-30 px-20">
       {/* Header */}
-      <div className="flex flex-col xl:flex-row items-center justify-center xl:justify-between gap-8 mb-12">
+      <div className="flex flex-col xl:flex-row items-center justify-center  xl:justify-between gap-8 mb-12">
         <Image
           width={220}
-          height={80}
+          height={100}
           alt="Nexa Logo"
           src="/assets/icons/Nexa_Logo_Black.svg"
         />
 
-        <h2 className="text-center font-bold text-[clamp(36px,6vw,72px)]">
-          <span className="text-[#F05C90] font-extrabold">LỢI THẾ </span>
-          <span className="text-[#FBB7C3] font-extrabold">CẠNH TRANH</span>
+        <h2 className="text-center font-bold text-[clamp(36px,7vw,85px)] whitespace-nowrap">
+          <span className="text-[#8E7FF0] font-extrabold">LỢI THẾ </span>
+          <span className="text-[#BBB0FF] font-extrabold">CẠNH TRANH</span>
         </h2>
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 text-white">
         {content.map((item, index) => (
           <ContentCard key={index} {...item} />
         ))}
