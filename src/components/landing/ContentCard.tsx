@@ -16,9 +16,9 @@ const TEXT_HEIGHT = 380;
 const TEXT_X = 50;
 const TEXT_BASELINE_Y = SVG_HEIGHT - 40;
 
-const IdolCard = ({ imageSrc, altText, textColorCode }: IProps) => {
+const ContentCard = ({ imageSrc, altText, textColorCode }: IProps) => {
   return (
-    <div className="relative w-full aspect-[7/10] bg-black">
+    <div className="relative w-full aspect-[7/10] bg-transparent">
       {/* SVG defs */}
       <svg
         viewBox={`0 0 ${SVG_WIDTH} ${SVG_HEIGHT}`}
@@ -46,7 +46,7 @@ const IdolCard = ({ imageSrc, altText, textColorCode }: IProps) => {
           }}
         />
       </div>
-            <Image
+      <Image
         alt="logo"
         src="/assets/icons/NexaLogoOnly.svg"
         width={60}
@@ -78,9 +78,8 @@ const IdolCard = ({ imageSrc, altText, textColorCode }: IProps) => {
           {altText}
         </text>
       </svg>
-
     </div>
   );
 };
 
-export default IdolCard;
+export default ContentCard;

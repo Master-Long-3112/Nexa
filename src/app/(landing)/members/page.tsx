@@ -1,10 +1,10 @@
-import CaseStudy from "@/components/landing/CaseStudy/CaseStudy";
+import Kols from "@/components/landing/home/Kols";
 import React from "react";
 
 const page = () => {
   return (
     <div>
-      <CaseStudy />
+      <Kols />
     </div>
   );
 };

@@ -54,7 +54,7 @@ const StatsBar = () => {
         {stats.map((item, index) => (
           <div
             key={index}
-            className={`py-6 lg:py-0 lg:px-8 w-full text-center ${index % 4 == 3 ? "text-right" : ""} ${index % 4 == 0 ? "text-left" : ""} lg:border-r last:border-r-0 border-gray-200`}
+            className={`py-6 lg:py-0 lg:px-8 w-full text-center ${index % 4 == 3 ? "lg:text-right" : ""} ${index % 4 == 0 ? "lg:text-left" : ""} lg:border-r last:border-r-0 border-gray-200`}
           >
             <p className="text-4xl font-semibold text-slate-900">
               {item.value}
@@ -70,7 +70,7 @@ const StatsBar = () => {
 
 const OurNetwork = () => {
   return (
-    <div className="max-w-7xl mx-auto px-20 py-20">
+    <div className="max-w-7xl mx-auto px-5 py-20">
       <div className="flex flex-col xl:flex-row xl:gap-30 items-center justify-between">
         <div className="flex flex-col w-full">
           <div>

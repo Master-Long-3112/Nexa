@@ -16,31 +16,24 @@ const mediaPartners = [
 
 const Partner = () => {
   return (
-    <>
+    <div className="max-w-7xl mx-auto px-5">
       {/* Banner */}
-      <div className="relative max-w-8xl overflow-hidden h-[39vw]">
-        <div className="absolute -left-[25%] bg-black text-white">
-          <div className="flex whitespace-nowrap">
-            {[...Array(4)].map((_, index) => (
-              <React.Fragment key={`banner1-${index}`}>
-                <span className="text-[8vw] font-bold flex items-end gap-3">
-                  TRUSTED PARTNER
-                  <span className="inline-block w-6 h-6 bg-white rounded-full mb-4 ms-4 me-10"></span>
-                </span>
-              </React.Fragment>
+      <div className="@container relative w-full aspect-[1000/440] overflow-hidden text-white mb-20">
+        <div className="absolute inset-0 -left-[30cqw]">
+          <div className="flex whitespace-nowrap bg-black py-3">
+            {[...Array(4)].map((_, i) => (
+              <span key={i} className="font-semibold text-[10cqw] leading-none">
+                TRUSTED PARTNER.
+              </span>
             ))}
           </div>
         </div>
-
-        <div className="absolute -top-[10vw] -left-[18vw] bg-purple-400 text-white transform -rotate-13">
-          <div className="flex whitespace-nowrap w-full">
-            {[...Array(4)].map((_, index) => (
-              <React.Fragment key={`banner1-${index}`}>
-                <span className="text-[8vw] font-bold flex items-end gap-3">
-                  TRUSTED PARTNER
-                  <span className="inline-block w-6 h-6 bg-white rounded-full mb-4 ms-4 me-10"></span>
-                </span>
-              </React.Fragment>
+        <div className="absolute z-20 -left-[40cqw] -top-[8cqw] transform -rotate-14">
+          <div className="flex whitespace-nowrap bg-[#8E7FF0] py-3">
+            {[...Array(4)].map((_, i) => (
+              <span key={i} className="font-semibold text-[10cqw] leading-none">
+                TRUSTED PARTNER.
+              </span>
             ))}
           </div>
         </div>
@@ -66,7 +59,7 @@ const Partner = () => {
         <div className="flex-5 flex-col justify-between">
           {/* Media */}
           <div className="border-b-2 border-gray-300 py-5">
-            <p className="font-bold text-7xl text-center xl:text-2xl xl:text-start">
+            <p className="font-semibold text-7xl text-center xl:text-2xl xl:text-start">
               Media Partners
             </p>
             <div className="grid grid-cols-2 xl:grid-cols-5  gap-5 mt-5">
@@ -86,7 +79,7 @@ const Partner = () => {
             </div>
           </div>
           <div className="border-b-2 border-gray-300 py-5">
-            <p className="font-bold text-7xl text-center xl:text-2xl xl:text-start">
+            <p className="font-semibold text-7xl text-center xl:text-2xl xl:text-start">
               Brands
             </p>
             <div className="grid grid-cols-2 xl:grid-cols-5  gap-5 mt-5">
@@ -106,7 +99,7 @@ const Partner = () => {
             </div>
           </div>
           <div className="border-b-2 border-gray-300 py-5">
-            <p className="font-bold text-7xl text-center xl:text-2xl xl:text-start">
+            <p className="font-semibold text-7xl text-center xl:text-2xl xl:text-start">
               Platform Partners
             </p>
             <div className="grid grid-cols-2 xl:grid-cols-5  gap-5 mt-5">
@@ -127,7 +120,7 @@ const Partner = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -4,24 +4,32 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode } from "swiper/modules";
 import { useRef, useState } from "react";
 import "swiper/css";
-import IdolCard from "./IdolCard";
 import type { Swiper as SwiperType } from "swiper";
+import ContentCard from "../ContentCard";
 
 const idolImages = new Array(9).fill({
   imageSrc: "/assets/images/JennieKim.jpg",
   altText: "Jennie Kim Idol Card",
 });
 
-const CaseStudy = () => {
+const Kols = () => {
   const swiperRef = useRef<SwiperType>(null);
   const [progress, setProgress] = useState(0);
 
   return (
-    <div className=" px-20 bg-black text-white pb-25 max-w-7xl mx-auto">
-      {/* Title */}
-      <div className="relative py-10 mb-8">
-        <div className="absolute top-17 w-28 h-[12px] bg-pink-300 rounded-full" />
-        <p className="text-4xl relative z-10">Case Study</p>
+    <div className="px-5 pb-25 max-w-7xl mx-auto">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-6">
+        <div className="relative flex items-center">
+          <h2 className="z-10 text-3xl font-semibold mb-6">Our Top KOLS</h2>
+          <div className="absolute inset-0 h-[15%] w-[50%] bg-[#8E7FF0] top-[45%]"></div>
+        </div>
+        <div className="relative flex items-center">
+          <p className="font-semibold tracking-widest z-10 me-12">
+            VIEW ALL KOLS
+          </p>
+          <div className="absolute inset-0 h-[200%] -top-[50%] -left-5 aspect-square bg-[#8E7FF0] rounded-full"></div>
+        </div>
       </div>
 
       {/* Swiper */}
@@ -49,7 +57,7 @@ const CaseStudy = () => {
       >
         {idolImages.map((idol, i) => (
           <SwiperSlide key={i}>
-            <IdolCard {...idol} />
+            <ContentCard {...idol} />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -59,14 +67,14 @@ const CaseStudy = () => {
         {/* Left button */}
         <button
           onClick={() => swiperRef.current?.slidePrev()}
-          className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-white/10 transition"
+          className="w-10 h-10 rounded-full border flex items-center justify-center hover:bg-white/10 transition"
         >
           ←
         </button>
         {/* Right button */}
         <button
           onClick={() => swiperRef.current?.slideNext()}
-          className="w-10 h-10 rounded-full bg-pink-300 text-black flex items-center justify-center hover:brightness-110 transition"
+          className="w-10 h-10 rounded-full border bg-[#8E7FF0] text-black flex items-center justify-center hover:brightness-110 transition"
         >
           →
         </button>
@@ -74,15 +82,15 @@ const CaseStudy = () => {
         {/* Track */}
         <div className="relative flex flex-1 h-[20px] rounded-full overflow-hidden">
           {/* Bar */}
-          <div className="absolute top-[9px] left-[2%] inset-0 bg-white/40 h-[2px] w-[96%] relative">
+          <div className="absolute top-[9px] left-[2%] inset-0 bg-black h-[2px] w-[96%]">
             {/* Dot */}
-            <div className="absolute -top-[2px] left-[-2px] w-[6px] h-[6px] bg-white rounded-full" />
-            <div className="absolute -top-[2px] right-[-2px] w-[6px] h-[6px] bg-white rounded-full" />
+            <div className="absolute z-20 -top-[2px] left-[-4px] w-[6px] h-[6px] bg-black rounded-full" />
+            <div className="absolute z-20 -top-[2px] right-[-2px] w-[6px] h-[6px] bg-black rounded-full" />
           </div>
 
           {/* Thumb */}
           <div
-            className="absolute top-[6px] left-[2%]  h-[8px] bg-pink-300 rounded-full transition-all duration-300 w-[10%]"
+            className="absolute z-10 top-[6px] left-[2%]  h-[8px] bg-[#8E7FF0] rounded-full transition-all duration-300 w-[10%]"
             style={{
               marginLeft: `${Math.min(progress * 100, 86)}%`,
             }}
@@ -93,4 +101,4 @@ const CaseStudy = () => {
   );
 };
 
-export default CaseStudy;
+export default Kols;

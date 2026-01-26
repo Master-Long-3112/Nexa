@@ -1,30 +1,25 @@
-import ContactSection from "@/components/landing/ContactSection";
-import Footer from "@/components/common/Footer";
-import Header from "@/components/common/Header";
+import ContactSection from "@/components/landing/home/ContactSection";
 import Hero from "@/components/landing/home/Hero";
-import Image from "next/image";
-import Partner from "@/components/landing/Partner";
-import IdolCard from "@/components/landing/CaseStudy/IdolCard";
-import CaseStudy from "@/components/landing/CaseStudy/CaseStudy";
 import CompetitiveAdvantage from "@/components/landing/home/CompetitiveAdvantage";
-import ForCreator from "@/components/landing/ForCreator";
-import ForBrand from "@/components/landing/ForBrand";
 import OurNetwork from "@/components/landing/home/OurNetwork";
+import Community from "@/components/landing/home/Community";
+import Award from "@/components/landing/home/Award";
+import Kols from "@/components/landing/home/Kols";
+import Partner from "@/components/landing/home/Partner";
+import News from "@/components/landing/home/News";
 
 export default function Home() {
   return (
-    <div>
+    <div className="max-w-7xl mx-auto px-5">
       <Hero />
       <OurNetwork />
       <CompetitiveAdvantage />
       <ContactSection />
-      {/* 
-      
-      
-      <ForCreator />
-      <CaseStudy />
-      <ForBrand />
-      <Partner /> */}
+      <Community />
+      <Award />
+      <Kols />
+      <Partner />
+      <News />
     </div>
   );
 }

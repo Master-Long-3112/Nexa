@@ -88,7 +88,7 @@ const ContentCard = ({
 
 const CompetitiveAdvantage = () => {
   return (
-    <section className="max-w-7xl mx-auto pb-30 px-20">
+    <section className="max-w-7xl mx-auto pb-30 px-5">
       {/* Header */}
       <div className="flex flex-col xl:flex-row items-center justify-center  xl:justify-between gap-8 mb-12">
         <Image
