@@ -7,6 +7,7 @@ import Award from "@/components/landing/home/Award";
 import Kols from "@/components/landing/home/Kols";
 import Partner from "@/components/landing/home/Partner";
 import News from "@/components/landing/home/News";
+import Connecting from "@/components/landing/home/Connecting";
 
 export default function Home() {
   return (
@@ -14,12 +15,13 @@ export default function Home() {
       <Hero />
       <OurNetwork />
       <CompetitiveAdvantage />
-      <ContactSection />
       <Community />
       <Award />
       <Kols />
+      <Connecting />
       <Partner />
       <News />
+      <ContactSection />
     </div>
   );
 }
